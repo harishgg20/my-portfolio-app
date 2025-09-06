@@ -16,6 +16,7 @@ const projects = [
     description: "Developed an interactive Tableau dashboard using the Superstore Sales dataset to analyze sales, profit, and customer trends across regions and categories, enabling data-driven insights through visualization and drill-down analysis.",
     image: 'https://picsum.photos/600/400?random=6',
     imageHint: 'tableau sales dashboard',
+    link: 'https://github.com/harishgg20/tableau-sales-project',
   },
   {
     title: 'Automated AI Data Analyst',
