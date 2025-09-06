@@ -5,10 +5,10 @@ import { Section } from './section';
 
 const projects = [
   {
-    title: 'UPI Transaction Analysis',
-    description: 'Extracted and transformed PhonePe Pulse\'s UPI transaction data using Python and Pandas. Stored the processed data in a MySQL database and developed an interactive dashboard with Streamlit and Plotly to visualize transaction trends, analyze top categories, and provide geospatial insights across different states and years.',
+    title: 'Insurance Customer Analysis',
+    description: 'Analyzed insurance customer data to identify key factors influencing premium costs. Performed exploratory data analysis (EDA) and data visualization to uncover relationships between attributes like age, BMI, and smoking habits with insurance charges, helping to understand customer demographics and risk profiles.',
     image: 'https://picsum.photos/600/400?random=1',
-    imageHint: 'data analysis dashboard',
+    imageHint: 'insurance analysis chart',
   },
   {
     title: 'Blinkit PowerBI Dashboard',
