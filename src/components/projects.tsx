@@ -30,6 +30,7 @@ const projects = [
     description: 'Conducted SQL-based analysis on Blinkit grocery sales data to clean and standardize datasets. Extracted key KPIs including sales, average value, and customer ratings. Delivered insights on product, outlet, and location performance to support data-driven decision-making.',
     image: 'https://picsum.photos/600/400?random=4',
     imageHint: 'data insights dashboard',
+    link: 'https://github.com/harishgg20/blinkit-data-insights',
   },
   {
     title: 'Disease Prediction App',
