@@ -26,9 +26,6 @@ export default function Home() {
           <Contact />
         </div>
       </main>
-      <footer className="py-6 text-center text-muted-foreground">
-        <p>&copy; {new Date().getFullYear()} Persona Portfolio. All rights reserved.</p>
-      </footer>
     </div>
   );
 }

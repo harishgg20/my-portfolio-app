@@ -41,7 +41,7 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="text-2xl font-bold text-foreground">
-            <a href="#profile">Persona</a>
+            <a href="#profile">Ganapati Naik</a>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
