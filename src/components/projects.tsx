@@ -6,7 +6,7 @@ import { Section } from './section';
 const projects = [
   {
     title: 'UPI Transaction Analysis',
-    description: 'Analyzed UPI transaction data using Python, Pandas, and Plotly to extract and visualize key metrics. Built an interactive dashboard with Streamlit to explore transaction trends across states and years.',
+    description: 'Extracted and transformed PhonePe Pulse\'s UPI transaction data using Python and Pandas. Stored the processed data in a MySQL database and developed an interactive dashboard with Streamlit and Plotly to visualize transaction trends, analyze top categories, and provide geospatial insights across different states and years.',
     image: 'https://picsum.photos/600/400?random=1',
     imageHint: 'data analysis dashboard',
   },
