@@ -13,7 +13,7 @@ const educationHistory = [
     period: '2020-2023',
     degree: 'Bachelor of Science',
     institution: 'DR.A.V.BALIGA COLLEGE OF ARTS AND SCIENCE',
-    details: 'Percentage: 73.6%',
+    details: 'CGPA: 7.3',
   },
 ];
 
