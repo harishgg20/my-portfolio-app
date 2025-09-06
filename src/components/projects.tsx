@@ -23,10 +23,10 @@ const projects = [
     imageHint: 'workflow automation',
   },
   {
-    title: 'Customer Segmentation Using K-Means',
-    description: 'Performed customer segmentation using credit card data in order to provide targeted recommendations such as saving plans, loans, and wealth management services for different customer groups.',
+    title: 'Blinkit Data Insights',
+    description: 'Analyzed the Blinkit dataset using advanced SQL queries to derive insights into store performance, item distribution, and sales patterns, helping to uncover key business trends.',
     image: 'https://picsum.photos/600/400?random=4',
-    imageHint: 'customer segmentation',
+    imageHint: 'data insights dashboard',
   },
   {
     title: 'Walmart Data Case Study',
