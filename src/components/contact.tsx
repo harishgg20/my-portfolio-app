@@ -12,6 +12,7 @@ const contactDetails = [
     icon: <Phone />,
     label: 'CONTACT NUMBER',
     value: '+91 9141074129',
+    href: 'tel:+919141074129',
   },
   {
     icon: <Send />,
