@@ -23,6 +23,7 @@ const projects = [
     description: 'This project is an AI-powered data analysis workflow built with n8n. It integrates Google Gemini (PaLM) AI, Google Sheets, and QuickChart.io to automatically analyze datasets, generate visualizations, and send professional summaries via Gmail.',
     image: 'https://picsum.photos/600/400?random=3',
     imageHint: 'workflow automation',
+    link: 'https://github.com/harishgg20/n8n-ai-data-analyst',
   },
   {
     title: 'Blinkit Data Insights',
