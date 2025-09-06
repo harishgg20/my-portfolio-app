@@ -4,16 +4,16 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const educationHistory = [
   {
+    period: '2023-2025',
+    degree: 'Master of Computer Applications',
+    institution: 'Sir M Visvesvaraya Institute of Technology',
+    details: 'CGPA: 7.9',
+  },
+  {
     period: '2020-2023',
     degree: 'Bachelor of Science',
     institution: 'DR.A.V.BALIGA COLLEGE OF ARTS AND SCIENCE',
     details: 'Percentage: 73.6%',
-  },
-  {
-    period: '2018-2020',
-    degree: 'Higher Secondary School',
-    institution: 'JAWAHAR NAVODAYA VIDYALAYA',
-    details: 'Percentage: 86%',
   },
 ];
 
