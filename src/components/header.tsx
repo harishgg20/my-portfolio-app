@@ -17,16 +17,17 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      let currentSection = 'Home';
-      navLinks.forEach((link) => {
-        if (link.href.startsWith('#')) {
-          const section = document.querySelector(link.href) as HTMLElement;
-          if (section && window.scrollY >= section.offsetTop - 150) {
-            currentSection = link.label;
-          }
-        }
-      });
+      let currentSection = '';
+      const sections = navLinks.map(link => document.querySelector(link.href));
 
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i] as HTMLElement;
+        if (section && window.scrollY >= section.offsetTop - 150) {
+          currentSection = navLinks[i].label;
+          break;
+        }
+      }
+      
       if (
         window.innerHeight + window.scrollY >=
         document.body.offsetHeight - 2
@@ -34,7 +35,12 @@ export function Header() {
         currentSection = 'Contact';
       }
 
-      setActiveLink(currentSection);
+      if (currentSection) {
+        setActiveLink(currentSection);
+      } else if (window.scrollY < 200) {
+        // If no section is matched and we are at the top, default to Home
+        setActiveLink('Home');
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
