@@ -18,7 +18,7 @@ const projects = [
   },
   {
     title: 'Automated AI Data Analyst',
-    description: 'This project showcases an automated data analysis workflow using n8n. It connects to a PostgreSQL database, uses an AI agent to analyze the data, and sends a summary of the findings to a Discord channel, demonstrating a powerful pipeline for automated reporting and insights.',
+    description: 'This project is an AI-powered data analysis workflow built with n8n. It integrates Google Gemini (PaLM) AI, Google Sheets, and QuickChart.io to automatically analyze datasets, generate visualizations, and send professional summaries via Gmail.',
     image: 'https://picsum.photos/600/400?random=3',
     imageHint: 'workflow automation',
   },
