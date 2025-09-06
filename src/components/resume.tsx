@@ -3,7 +3,7 @@ import { Section } from './section';
 import { Education } from './education';
 
 const resumeDescription =
-  'Aspiring Data Analyst with a strong foundation in data science, statistical analysis, and Data Visualization. Experienced in Python, SQL, natural language processing, and tools like LangChain and Hugging Face. Passionate about developing AI solutions and leveraging LLMs to drive innovative business strategies.';
+  'Data Analyst with hands-on experience in analyzing large datasets, developing data models, and applying statistical techniques to deliver actionable business insights. Skilled in SQL, Python, Excel, Power BI, and Tableau. Adept at creating impactful dashboards and reports and presenting complex findings clearly to stakeholders to drive business strategy.';
 
 export function Resume() {
   return (
