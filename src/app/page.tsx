@@ -23,9 +23,9 @@ export default function Home() {
         </div>
         <div className="max-w-6xl mx-auto space-y-12 sm:space-y-16 mt-16">
           <Separator />
-          <Projects />
-          <Separator />
           <Resume />
+          <Separator />
+          <Projects />
           <Separator />
           <Contact />
         </div>
