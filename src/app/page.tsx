@@ -1,11 +1,11 @@
 import { AboutMe } from '@/components/about-me';
 import { Projects } from '@/components/projects';
-import { Education } from '@/components/education';
 import { Separator } from '@/components/ui/separator';
 import { Header } from '@/components/header';
 import { Contact } from '@/components/contact';
 import { LeftPane } from '@/components/left-pane';
 import { Hero } from '@/components/hero';
+import { Resume } from '@/components/resume';
 
 export default function Home() {
   return (
@@ -25,7 +25,7 @@ export default function Home() {
           <Separator />
           <Projects />
           <Separator />
-          <Education />
+          <Resume />
           <Separator />
           <Contact />
         </div>
