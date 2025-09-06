@@ -28,7 +28,7 @@ const projects = [
   {
     title: 'Blinkit Data Insights',
     description: 'Conducted SQL-based analysis on Blinkit grocery sales data to clean and standardize datasets. Extracted key KPIs including sales, average value, and customer ratings. Delivered insights on product, outlet, and location performance to support data-driven decision-making.',
-    image: 'https://picsum.photos/600/400?random=4',
+    image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxBbmFseXRpY3N8ZW58MHx8fHwxNzU3MTU4NjE0fDA&ixlib=rb-4.1.0&q=80&w=1080',
     imageHint: 'data insights dashboard',
     link: 'https://github.com/harishgg20/blinkit-data-insights',
   },
