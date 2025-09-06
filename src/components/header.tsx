@@ -17,34 +17,38 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = navLinks.map(link => document.querySelector(link.href) as HTMLElement).filter(s => s);
-      const scrollPosition = window.scrollY;
+      const scrollPosition = window.scrollY + 150; // Add offset for better accuracy
+      let currentSectionId = '';
 
-      // Check if we are at the bottom of the page
-      if (window.innerHeight + scrollPosition >= document.body.offsetHeight - 2) {
-        setActiveLink('Contact');
-        return;
-      }
-      
-      // Check if we are at the top of the page
-      if (scrollPosition < 200) {
-        setActiveLink('Home');
-        return;
-      }
-
-      let currentSection = 'Home';
-      for (const section of sections) {
-        if (section.offsetTop <= scrollPosition + 150) {
-          currentSection = navLinks.find(link => link.href === `#${section.id}`)?.label || currentSection;
+      for (const link of navLinks) {
+        const section = document.querySelector(link.href) as HTMLElement;
+        if (section) {
+          if (section.offsetTop <= scrollPosition) {
+            currentSectionId = section.id;
+          } else {
+            break;
+          }
         }
       }
 
-      setActiveLink(currentSection);
+      // Check if we are near the bottom of the page
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 2) {
+        const contactSection = document.querySelector('#contact') as HTMLElement;
+        if(contactSection) {
+            currentSectionId = 'contact';
+        }
+      }
+      
+      const newActiveLink = navLinks.find(link => link.href === `#${currentSectionId}`)?.label || 'Home';
+      
+      if (newActiveLink !== activeLink) {
+        setActiveLink(newActiveLink);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [activeLink]);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, label: string) => {
     e.preventDefault();
