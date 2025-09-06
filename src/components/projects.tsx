@@ -12,7 +12,7 @@ const projects = [
   },
   {
     title: 'Sales Performance Dashboard',
-    description: "This project features an interactive Tableau dashboard designed to provide a comprehensive overview of sales performance. It allows for the analysis of key metrics such as total sales, profit, and order quantities, with filtering capabilities by region, state, category, and sub-category. The dashboard helps in identifying sales trends, understanding regional performance, and making data-driven business decisions.",
+    description: "Developed an interactive Tableau dashboard using the Superstore Sales dataset to analyze sales, profit, and customer trends across regions and categories, enabling data-driven insights through visualization and drill-down analysis.",
     image: 'https://picsum.photos/600/400?random=6',
     imageHint: 'tableau sales dashboard',
   },
