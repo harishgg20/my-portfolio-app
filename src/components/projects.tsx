@@ -14,7 +14,7 @@ const projects = [
   {
     title: 'Sales Performance Dashboard',
     description: "Developed an interactive Tableau dashboard using the Superstore Sales dataset to analyze sales, profit, and customer trends across regions and categories, enabling data-driven insights through visualization and drill-down analysis.",
-    image: 'https://picsum.photos/600/400?random=6',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxBbmFseXRpY3N8ZW58MHx8fHwxNzU3MTU4NjE0fDA&ixlib=rb-4.1.0&q=80&w=1080',
     imageHint: 'tableau sales dashboard',
     link: 'https://github.com/harishgg20/tableau-sales-project',
   },
