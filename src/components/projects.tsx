@@ -1,13 +1,14 @@
+
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Section } from './section';
 
 const projects = [
   {
-    title: 'Customer Cohort and RFM Analysis on Retail Dataset',
-    description: 'Conducted Cohort Analysis, Net Dollar Revenue Analysis, Customer Lifetime Value Analysis, and RFM Segmentation to uncover actionable insights from an online retail dataset.',
+    title: 'UPI Transaction Analysis',
+    description: 'Analyzed UPI transaction data using Python, Pandas, and Plotly to extract and visualize key metrics. Built an interactive dashboard with Streamlit to explore transaction trends across states and years.',
     image: 'https://picsum.photos/600/400?random=1',
-    imageHint: 'retail analysis',
+    imageHint: 'data analysis dashboard',
   },
   {
     title: 'Blinkit PowerBI Dashboard',
