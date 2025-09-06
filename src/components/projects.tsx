@@ -21,7 +21,7 @@ const projects = [
   {
     title: 'Automated AI Data Analyst',
     description: 'This project is an AI-powered data analysis workflow built with n8n. It integrates Google Gemini (PaLM) AI, Google Sheets, and QuickChart.io to automatically analyze datasets, generate visualizations, and send professional summaries via Gmail.',
-    image: 'https://picsum.photos/600/400?random=3',
+    image: 'https://images.unsplash.com/photo-1582406592664-24b0c8705265?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8QWklMjBBbmFseXRpY3N8ZW58MHx8fHwxNzU3MTU4NjY0fDA&ixlib=rb-4.1.0&q=80&w=1080',
     imageHint: 'workflow automation',
     link: 'https://github.com/harishgg20/n8n-ai-data-analyst',
   },
