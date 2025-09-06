@@ -9,6 +9,7 @@ const projects = [
     description: 'This project presents an interactive Power BI dashboard for Prism Insurance Pvt. Ltd., designed to provide insights into customer demographics, policy performance, claims management, and overall insurance operations. The dashboard integrates multiple data sources to support data-driven decision-making for business stakeholders.',
     image: 'https://picsum.photos/600/400?random=1',
     imageHint: 'insurance analysis chart',
+    link: 'https://github.com/harishgg20/insurance-customer-analysis',
   },
   {
     title: 'Sales Performance Dashboard',
@@ -44,21 +45,25 @@ export function Projects() {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
         {projects.map((project) => (
-          <Card key={project.title} className="flex flex-col overflow-hidden bg-transparent border-none shadow-none rounded-none">
-            <div className="relative h-48 w-full mb-4">
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className="object-cover rounded-lg"
-                data-ai-hint={project.imageHint}
-              />
-            </div>
-            <CardHeader className="p-0">
-              <CardTitle className="text-xl">{project.title}</CardTitle>
-              <CardDescription className="pt-2 text-muted-foreground">{project.description}</CardDescription>
-            </CardHeader>
-          </Card>
+          <div key={project.title}>
+            <a href={project.link} target="_blank" rel="noopener noreferrer" className="block group">
+              <Card className="flex flex-col overflow-hidden bg-transparent border-none shadow-none rounded-none h-full">
+                <div className="relative h-48 w-full mb-4">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+                    data-ai-hint={project.imageHint}
+                  />
+                </div>
+                <CardHeader className="p-0 flex-grow">
+                  <CardTitle className="text-xl group-hover:text-primary transition-colors">{project.title}</CardTitle>
+                  <CardDescription className="pt-2 text-muted-foreground">{project.description}</CardDescription>
+                </CardHeader>
+              </Card>
+            </a>
+          </div>
         ))}
       </div>
     </Section>
