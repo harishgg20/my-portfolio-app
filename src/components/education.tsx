@@ -1,3 +1,4 @@
+
 import { Section } from './section';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -6,7 +7,7 @@ const educationHistory = [
     period: '2020-2023',
     degree: 'Bachelor of Science',
     institution: 'DR.A.V.BALIGA COLLEGE OF ARTS AND SCIENCE',
-    details: 'Percentage: 83%',
+    details: 'Percentage: 73.6%',
   },
   {
     period: '2018-2020',
