@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '#about', label: 'About' },
-  { href: '/resume.pdf', label: 'Resume', isExternal: true },
+  { href: '#resume', label: 'Resume' },
   { href: '#projects', label: 'Projects' },
   { href: '#contact', label: 'Contact' },
 ];
@@ -17,37 +17,34 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = navLinks
-        .filter(link => !link.isExternal && link.href.startsWith('#'))
-        .map(link => document.querySelector(link.href));
-      
-      const scrollPosition = window.scrollY + 150;
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i] as HTMLElement;
-        if (section && section.offsetTop <= scrollPosition) {
-          const correspondingLink = navLinks.find(link => link.href === `#${section.id}`);
-          if (correspondingLink) {
-            setActiveLink(correspondingLink.label);
-            break;
+      let active = 'Home';
+      for (const link of navLinks) {
+        if (link.href.startsWith('#')) {
+          const section = document.querySelector(link.href) as HTMLElement;
+          if (section && window.scrollY >= section.offsetTop - 150) {
+            active = link.label;
           }
         }
       }
-      if (window.scrollY < 150) {
-        setActiveLink('Home');
-      }
+      setActiveLink(active);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (href: string, label: string) => {
-    if (!href.startsWith('#')) return;
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, label: string) => {
+    e.preventDefault();
     setActiveLink(label);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (href === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (href.startsWith('#')) {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      window.open(href, '_blank', 'noopener noreferrer');
     }
   };
 
@@ -56,23 +53,16 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="text-2xl font-bold text-foreground">
-            <a href="/">Ganapati Naik</a>
+            <a href="/" onClick={(e) => handleNavClick(e, '/', 'Home')}>Ganapati Naik</a>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                target={link.isExternal ? '_blank' : undefined}
-                rel={link.isExternal ? 'noopener noreferrer' : undefined}
-                onClick={(e) => {
-                  if (!link.isExternal) {
-                    e.preventDefault();
-                    handleNavClick(link.href, link.label);
-                  }
-                }}
+                onClick={(e) => handleNavClick(e, link.href, link.label)}
                 className={`text-sm font-medium transition-colors hover:text-primary ${
-                  activeLink === link.label && !link.isExternal
+                  activeLink === link.label
                     ? 'text-primary border-b-2 border-primary'
                     : 'text-foreground/80'
                 }`}
