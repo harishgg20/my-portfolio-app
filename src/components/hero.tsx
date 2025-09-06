@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 export function Hero() {
   return (
     <section id="home" className="flex flex-col justify-center min-h-[calc(100vh-10rem)] py-12">
-      <div className="max-w-4xl mx-auto text-left">
+      <div className="max-w-4xl text-left">
         <p className="text-primary text-lg font-medium mb-2">HELLO!</p>
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
           I'm <span className="text-primary">Ganapati</span>
