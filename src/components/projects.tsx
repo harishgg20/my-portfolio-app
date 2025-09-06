@@ -17,10 +17,10 @@ const projects = [
     imageHint: 'tableau sales dashboard',
   },
   {
-    title: 'Bank Loan Dashboard Using Excel',
-    description: 'Developed two interactive Excel dashboards to analyze and generate actionable insights from bank loan data, enhancing decision-making processes.',
+    title: 'Automated AI Data Analyst',
+    description: 'This project showcases an automated data analysis workflow using n8n. It connects to a PostgreSQL database, uses an AI agent to analyze the data, and sends a summary of the findings to a Discord channel, demonstrating a powerful pipeline for automated reporting and insights.',
     image: 'https://picsum.photos/600/400?random=3',
-    imageHint: 'excel dashboard',
+    imageHint: 'workflow automation',
   },
   {
     title: 'Customer Segmentation Using K-Means',
