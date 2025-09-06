@@ -6,9 +6,9 @@ export function Hero() {
       <div className="max-w-4xl text-left">
         <p className="text-primary text-lg font-medium mb-2">HELLO!</p>
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-          I'm <span className="text-primary">Ganapati</span>
+          I'm <span className="text-primary">Harish</span>
           <br />
-          Naik
+          Gouda
         </h1>
         <p className="mt-8 text-2xl text-foreground/80">Data Analyst</p>
         <div className="mt-8 flex gap-4">
