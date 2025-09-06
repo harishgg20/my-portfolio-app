@@ -5,7 +5,7 @@ const contactDetails = [
   {
     icon: <MapPin />,
     label: 'ADDRESS',
-    value: 'Kumta, India',
+    value: 'Bangalore, India',
   },
   {
     icon: <Phone />,
