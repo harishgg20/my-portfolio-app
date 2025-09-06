@@ -6,6 +6,7 @@ import { Contact } from '@/components/contact';
 import { LeftPane } from '@/components/left-pane';
 import { Hero } from '@/components/hero';
 import { Resume } from '@/components/resume';
+import { MoreProjects } from '@/components/more-projects';
 
 export default function Home() {
   return (
@@ -26,10 +27,12 @@ export default function Home() {
           <Resume />
           <Separator />
           <Projects />
-          <Separator />
-          <Contact />
         </div>
       </main>
+      <MoreProjects />
+      <div className="py-16">
+        <Contact />
+      </div>
     </div>
   );
 }
