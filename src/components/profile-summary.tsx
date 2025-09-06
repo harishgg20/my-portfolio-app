@@ -5,7 +5,7 @@ export function ProfileSummary() {
     <section className="flex flex-col items-center text-center">
       <div className="relative h-40 w-40 rounded-full overflow-hidden border-4 border-primary/50 mb-4">
         <Image
-          src="https://picsum.photos/200/200"
+          src="/profile.jpg"
           alt="Harish Gouda"
           width={160}
           height={160}
