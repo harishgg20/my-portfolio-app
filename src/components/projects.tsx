@@ -6,7 +6,7 @@ import { Section } from './section';
 const projects = [
   {
     title: 'Insurance Customer Analysis',
-    description: 'Analyzed insurance customer data to identify key factors influencing premium costs. Performed exploratory data analysis (EDA) and data visualization to uncover relationships between attributes like age, BMI, and smoking habits with insurance charges, helping to understand customer demographics and risk profiles.',
+    description: 'This project presents an interactive Power BI dashboard for Prism Insurance Pvt. Ltd., designed to provide insights into customer demographics, policy performance, claims management, and overall insurance operations. The dashboard integrates multiple data sources to support data-driven decision-making for business stakeholders.',
     image: 'https://picsum.photos/600/400?random=1',
     imageHint: 'insurance analysis chart',
   },
