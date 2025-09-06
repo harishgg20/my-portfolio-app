@@ -3,7 +3,7 @@ import { Section } from './section';
 
 const skills = [
   { name: 'SQL', proficiency: 90 },
-  { name: 'PYTHON', proficiency: 70 },
+  { name: 'PYTHON', proficiency: 90 },
   { name: 'Data Visualization', proficiency: 90 },
   { name: 'Statistical Analysis', proficiency: 85 },
   { name: 'MS Excel', proficiency: 90 },
