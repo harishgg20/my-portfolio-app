@@ -22,8 +22,7 @@ const contactDetails = [
     icon: <Download />,
     label: 'DOWNLOAD RESUME',
     value: 'resumelink',
-    href: '/resume.pdf',
-    download: true,
+    href: 'https://drive.google.com/file/d/17Wxv76dkNP16SIWAnpUccKkI47mTBzNl/view?usp=sharing',
   },
 ];
 
@@ -51,7 +50,8 @@ export function Contact() {
               <p className="text-sm font-semibold tracking-widest text-muted-foreground mb-2">{detail.label}</p>
               <a
                 href={detail.href}
-                download={detail.download}
+                target={detail.label === 'DOWNLOAD RESUME' ? '_blank' : undefined}
+                rel={detail.label === 'DOWNLOAD RESUME' ? 'noopener noreferrer' : undefined}
                 className="text-foreground/80 hover:text-primary transition-colors"
               >
                 {detail.value}

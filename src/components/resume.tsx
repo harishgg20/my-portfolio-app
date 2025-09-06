@@ -22,7 +22,7 @@ export function Resume() {
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-3 text-lg font-semibold"
           >
-            <a href="/resume.pdf" download>
+            <a href="https://drive.google.com/file/d/17Wxv76dkNP16SIWAnpUccKkI47mTBzNl/view?usp=sharing" target="_blank" rel="noopener noreferrer">
               Download Resume
             </a>
           </Button>
