@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const educationHistory = [
   {
-    period: '2023-2025',
+    period: '2024-2025',
     degree: 'Master of Computer Applications',
     institution: 'Sir M Visvesvaraya Institute of Technology',
     details: 'CGPA: 7.9',
