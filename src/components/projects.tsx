@@ -7,7 +7,7 @@ const projects = [
   {
     title: 'Insurance Customer Analysis',
     description: 'This project presents an interactive Power BI dashboard for Prism Insurance Pvt. Ltd., designed to provide insights into customer demographics, policy performance, claims management, and overall insurance operations. The dashboard integrates multiple data sources to support data-driven decision-making for business stakeholders.',
-    image: 'https://picsum.photos/600/400?random=1',
+    image: 'https://images.unsplash.com/photo-1724482606633-fa74fe4f5de1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxpbnN1cmFuY2V8ZW58MHx8fHwxNzU3MTU4NTMxfDA&ixlib=rb-4.1.0&q=80&w=1080',
     imageHint: 'insurance analysis chart',
     link: 'https://github.com/harishgg20/insurance-customer-analysis',
   },
