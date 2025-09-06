@@ -1,69 +1,62 @@
 import Image from 'next/image';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Section } from './section';
-import { ArrowRight } from 'lucide-react';
 
 const projects = [
   {
-    title: 'AI-Powered Content Summarizer',
-    description: 'A web application that uses a custom-trained model to summarize long articles and documents, providing quick insights.',
+    title: 'Customer Cohort and RFM Analysis on Retail Dataset',
+    description: 'Conducted Cohort Analysis, Net Dollar Revenue Analysis, Customer Lifetime Value Analysis, and RFM Segmentation to uncover actionable insights from an online retail dataset.',
     image: 'https://picsum.photos/600/400?random=1',
-    imageHint: 'abstract tech',
-    liveUrl: '#',
+    imageHint: 'retail analysis',
   },
   {
-    title: 'E-commerce Recommendation Engine',
-    description: 'Developed a personalized product recommendation system for an e-commerce platform, increasing user engagement by 25%.',
+    title: 'Blinkit PowerBI Dashboard',
+    description: "Built an interactive Power BI dashboard to monitor Blinkit's key operational metrics such as Sales, Ratings, and Ordered items.",
     image: 'https://picsum.photos/600/400?random=2',
-    imageHint: 'online shopping',
-    liveUrl: '#',
+    imageHint: 'powerbi dashboard',
   },
   {
-    title: 'Interactive Data Visualization Dashboard',
-    description: 'A dashboard for visualizing complex datasets using D3.js and React, featuring dynamic filters and real-time updates.',
+    title: 'Bank Loan Dashboard Using Excel',
+    description: 'Developed two interactive Excel dashboards to analyze and generate actionable insights from bank loan data, enhancing decision-making processes.',
     image: 'https://picsum.photos/600/400?random=3',
-    imageHint: 'data chart',
-    liveUrl: '#',
+    imageHint: 'excel dashboard',
   },
-    {
-    title: 'Project Management Tool',
-    description: 'A SaaS application for teams to manage tasks, track progress, and collaborate effectively on projects.',
+  {
+    title: 'Customer Segmentation Using K-Means',
+    description: 'Performed customer segmentation using credit card data in order to provide targeted recommendations such as saving plans, loans, and wealth management services for different customer groups.',
     image: 'https://picsum.photos/600/400?random=4',
-    imageHint: 'team collaboration',
-    liveUrl: '#',
+    imageHint: 'customer segmentation',
+  },
+  {
+    title: 'Walmart Data Case Study',
+    description: 'Performed data cleaning, exploratory data analysis (EDA), and answered critical business questions for Walmart using Pandas, uncovering key retail insights and trends.',
+    image: 'https://picsum.photos/600/400?random=5',
+    imageHint: 'data study',
   }
 ];
 
 export function Projects() {
   return (
     <Section id="projects" title="Projects">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+       <p className="text-center text-muted-foreground mb-12">
+        Below are the sample Data Science projects on Data Analysis, Data Cleaning, dashboard Creation, and Machine Learning.
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
         {projects.map((project) => (
-          <Card key={project.title} className="flex flex-col overflow-hidden group transform transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/20 bg-card">
-            <div className="relative h-48 w-full">
+          <Card key={project.title} className="flex flex-col overflow-hidden bg-transparent border-none shadow-none rounded-none">
+            <div className="relative h-48 w-full mb-4">
               <Image
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                className="object-cover rounded-lg"
                 data-ai-hint={project.imageHint}
               />
             </div>
-            <div className="flex flex-col flex-grow p-6">
-              <CardHeader className="p-0">
-                <CardTitle className="text-xl group-hover:text-primary transition-colors">{project.title}</CardTitle>
-                <CardDescription className="pt-2">{project.description}</CardDescription>
-              </CardHeader>
-              <div className="flex-grow" />
-              <CardFooter className="p-0 pt-4 mt-auto">
-                <Button asChild variant="link" className="p-0 text-primary/80 hover:text-primary">
-                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                    View Project <ArrowRight className="ml-2 h-4 w-4" />
-                  </a>
-                </Button>
-              </CardFooter>
-            </div>
+            <CardHeader className="p-0">
+              <CardTitle className="text-xl">{project.title}</CardTitle>
+              <CardDescription className="pt-2 text-muted-foreground">{project.description}</CardDescription>
+            </CardHeader>
           </Card>
         ))}
       </div>
