@@ -17,30 +17,29 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      let currentSection = '';
-      const sections = navLinks.map(link => document.querySelector(link.href));
+      const sections = navLinks.map(link => document.querySelector(link.href) as HTMLElement).filter(s => s);
+      const scrollPosition = window.scrollY;
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i] as HTMLElement;
-        if (section && window.scrollY >= section.offsetTop - 150) {
-          currentSection = navLinks[i].label;
-          break;
-        }
+      // Check if we are at the bottom of the page
+      if (window.innerHeight + scrollPosition >= document.body.offsetHeight - 2) {
+        setActiveLink('Contact');
+        return;
       }
       
-      if (
-        window.innerHeight + window.scrollY >=
-        document.body.offsetHeight - 2
-      ) {
-        currentSection = 'Contact';
+      // Check if we are at the top of the page
+      if (scrollPosition < 200) {
+        setActiveLink('Home');
+        return;
       }
 
-      if (currentSection) {
-        setActiveLink(currentSection);
-      } else if (window.scrollY < 200) {
-        // If no section is matched and we are at the top, default to Home
-        setActiveLink('Home');
+      let currentSection = 'Home';
+      for (const section of sections) {
+        if (section.offsetTop <= scrollPosition + 150) {
+          currentSection = navLinks.find(link => link.href === `#${section.id}`)?.label || currentSection;
+        }
       }
+
+      setActiveLink(currentSection);
     };
 
     window.addEventListener('scroll', handleScroll);
