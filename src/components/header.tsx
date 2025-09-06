@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 
 const navLinks = [
-  { href: '/', label: 'Home' },
+  { href: '#home', label: 'Home' },
   { href: '#about', label: 'About' },
   { href: '#resume', label: 'Resume' },
   { href: '#projects', label: 'Projects' },
@@ -17,16 +17,24 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      let active = 'Home';
-      for (const link of navLinks) {
+      let currentSection = 'Home';
+      navLinks.forEach((link) => {
         if (link.href.startsWith('#')) {
           const section = document.querySelector(link.href) as HTMLElement;
           if (section && window.scrollY >= section.offsetTop - 150) {
-            active = link.label;
+            currentSection = link.label;
           }
         }
+      });
+
+      if (
+        window.innerHeight + window.scrollY >=
+        document.body.offsetHeight - 2
+      ) {
+        currentSection = 'Contact';
       }
-      setActiveLink(active);
+
+      setActiveLink(currentSection);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -36,9 +44,7 @@ export function Header() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, label: string) => {
     e.preventDefault();
     setActiveLink(label);
-    if (href === '/') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else if (href.startsWith('#')) {
+    if (href.startsWith('#')) {
       const element = document.querySelector(href);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
@@ -53,7 +59,7 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="text-2xl font-bold text-foreground">
-            <a href="/" onClick={(e) => handleNavClick(e, '/', 'Home')}>Ganapati Naik</a>
+            <a href="#home" onClick={(e) => handleNavClick(e, '#home', 'Home')}>Ganapati Naik</a>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (

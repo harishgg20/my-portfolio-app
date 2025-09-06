@@ -30,7 +30,7 @@ export default function Home() {
         </div>
       </main>
       <MoreProjects />
-      <div className="py-16">
+      <div id="contact" className="py-16">
         <Contact />
       </div>
     </div>
