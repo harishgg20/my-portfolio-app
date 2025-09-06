@@ -1,7 +1,7 @@
 
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 
 const navLinks = [
@@ -14,10 +14,16 @@ const navLinks = [
 
 export function Header() {
   const [activeLink, setActiveLink] = useState('Home');
+  const isScrolling = useRef(false);
+  const scrollTimeout = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 150; // Add offset for better accuracy
+      if (isScrolling.current) {
+        return;
+      }
+
+      const scrollPosition = window.scrollY + 150;
       let currentSectionId = '';
 
       for (const link of navLinks) {
@@ -25,42 +31,40 @@ export function Header() {
         if (section) {
           if (section.offsetTop <= scrollPosition) {
             currentSectionId = section.id;
-          } else {
-            break;
           }
         }
       }
 
-      // Check if we are near the bottom of the page
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 2) {
-        const contactSection = document.querySelector('#contact') as HTMLElement;
-        if(contactSection) {
-            currentSectionId = 'contact';
-        }
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
+        currentSectionId = 'contact';
       }
-      
+
       const newActiveLink = navLinks.find(link => link.href === `#${currentSectionId}`)?.label || 'Home';
       
-      if (newActiveLink !== activeLink) {
-        setActiveLink(newActiveLink);
-      }
+      setActiveLink(newActiveLink);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [activeLink]);
+  }, []);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, label: string) => {
     e.preventDefault();
     setActiveLink(label);
-    if (href.startsWith('#')) {
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      window.open(href, '_blank', 'noopener noreferrer');
+    isScrolling.current = true;
+
+    if (scrollTimeout.current) {
+      clearTimeout(scrollTimeout.current);
     }
+    
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    scrollTimeout.current = setTimeout(() => {
+      isScrolling.current = false;
+    }, 1000); 
   };
 
   return (
