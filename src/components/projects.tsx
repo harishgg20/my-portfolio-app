@@ -24,7 +24,7 @@ const projects = [
   },
   {
     title: 'Blinkit Data Insights',
-    description: 'Analyzed the Blinkit dataset using advanced SQL queries to derive insights into store performance, item distribution, and sales patterns, helping to uncover key business trends.',
+    description: 'Conducted SQL-based analysis on Blinkit grocery sales data to clean and standardize datasets. Extracted key KPIs including sales, average value, and customer ratings. Delivered insights on product, outlet, and location performance to support data-driven decision-making.',
     image: 'https://picsum.photos/600/400?random=4',
     imageHint: 'data insights dashboard',
   },
