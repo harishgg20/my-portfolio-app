@@ -37,6 +37,7 @@ const projects = [
     description: 'This project is a web application that uses various machine learning models to predict the likelihood of several diseases. The application is built with Streamlit and provides a user-friendly interface for users to input their health data and get a prediction.',
     image: 'https://picsum.photos/600/400?random=5',
     imageHint: 'health machine learning',
+    link: 'https://github.com/harishgg20/disease-prediction-app',
   }
 ];
 
