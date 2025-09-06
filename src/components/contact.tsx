@@ -10,7 +10,7 @@ const contactDetails = [
   {
     icon: <Phone />,
     label: 'CONTACT NUMBER',
-    value: '+91 6360188430',
+    value: '9141074129',
   },
   {
     icon: <Send />,
