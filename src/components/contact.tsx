@@ -6,6 +6,7 @@ const contactDetails = [
     icon: <MapPin />,
     label: 'ADDRESS',
     value: 'Bangalore, India',
+    href: 'https://www.google.com/maps/search/?api=1&query=Bangalore',
   },
   {
     icon: <Phone />,
@@ -42,16 +43,23 @@ export function Contact() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {contactDetails.map((detail) => (
             <div key={detail.label} className="flex flex-col items-center text-center">
-              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/20 text-primary">
-                  {detail.icon}
+              <a
+                href={detail.href}
+                target={detail.href ? '_blank' : undefined}
+                rel={detail.href ? 'noopener noreferrer' : undefined}
+                className="group"
+              >
+                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/20 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                    {detail.icon}
+                  </div>
                 </div>
-              </div>
+              </a>
               <p className="text-sm font-semibold tracking-widest text-muted-foreground mb-2">{detail.label}</p>
               <a
                 href={detail.href}
-                target={detail.label === 'DOWNLOAD RESUME' ? '_blank' : undefined}
-                rel={detail.label === 'DOWNLOAD RESUME' ? 'noopener noreferrer' : undefined}
+                target={detail.href ? '_blank' : undefined}
+                rel={detail.href ? 'noopener noreferrer' : undefined}
                 className="text-foreground/80 hover:text-primary transition-colors"
               >
                 {detail.value}
