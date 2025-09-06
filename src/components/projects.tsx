@@ -29,10 +29,10 @@ const projects = [
     imageHint: 'data insights dashboard',
   },
   {
-    title: 'Walmart Data Case Study',
-    description: 'Performed data cleaning, exploratory data analysis (EDA), and answered critical business questions for Walmart using Pandas, uncovering key retail insights and trends.',
+    title: 'Disease Prediction App',
+    description: 'Developed a machine learning-based Disease Prediction web application using Streamlit. The app takes user symptoms as input and predicts potential diseases, leveraging a trained Decision Tree Classifier model to provide quick and interactive health insights.',
     image: 'https://picsum.photos/600/400?random=5',
-    imageHint: 'data study',
+    imageHint: 'health machine learning',
   }
 ];
 
