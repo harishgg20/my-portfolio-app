@@ -11,10 +11,10 @@ const projects = [
     imageHint: 'insurance analysis chart',
   },
   {
-    title: 'Blinkit PowerBI Dashboard',
-    description: "Built an interactive Power BI dashboard to monitor Blinkit's key operational metrics such as Sales, Ratings, and Ordered items.",
-    image: 'https://picsum.photos/600/400?random=2',
-    imageHint: 'powerbi dashboard',
+    title: 'Sales Performance Dashboard',
+    description: "This project features an interactive Tableau dashboard designed to provide a comprehensive overview of sales performance. It allows for the analysis of key metrics such as total sales, profit, and order quantities, with filtering capabilities by region, state, category, and sub-category. The dashboard helps in identifying sales trends, understanding regional performance, and making data-driven business decisions.",
+    image: 'https://picsum.photos/600/400?random=6',
+    imageHint: 'tableau sales dashboard',
   },
   {
     title: 'Bank Loan Dashboard Using Excel',
