@@ -6,7 +6,7 @@ const details = [
   { label: 'Profile', value: 'Data Analyst' },
   { label: 'Education', value: 'Master of Computer Applications (MCA)' },
   { label: 'Top Skills', value: 'Communication, Problem Solving, Python' },
-  { label: 'Language', value: 'English' },
+  { label: 'Language', value: 'English, Kannada' },
   { label: 'Interest', value: 'Data-driven decision making, Innovation' },
 ];
 
