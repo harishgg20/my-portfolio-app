@@ -21,7 +21,7 @@ const contactDetails = [
   {
     icon: <Download />,
     label: 'DOWNLOAD RESUME',
-    value: 'resumelink',
+    value: 'Download',
     href: 'https://drive.google.com/file/d/17Wxv76dkNP16SIWAnpUccKkI47mTBzNl/view?usp=sharing',
   },
 ];
