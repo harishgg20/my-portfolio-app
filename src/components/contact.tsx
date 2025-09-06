@@ -15,8 +15,8 @@ const contactDetails = [
   {
     icon: <Send />,
     label: 'EMAIL ADDRESS',
-    value: 'harishgouda@gmail.com',
-    href: 'mailto:harishgouda@gmail.com',
+    value: 'harishgouda52001@gmail.com',
+    href: 'mailto:harishgouda52001@gmail.com',
   },
   {
     icon: <Download />,
