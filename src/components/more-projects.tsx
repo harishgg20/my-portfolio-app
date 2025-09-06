@@ -20,7 +20,7 @@ export function MoreProjects() {
           I love to solve business problems & uncover hidden data stories
         </p>
         <Button asChild size="lg" className="mt-8 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-3 text-lg font-semibold">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/harishgg20" target="_blank" rel="noopener noreferrer">
             GITHUB
           </a>
         </Button>
